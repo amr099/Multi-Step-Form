@@ -1,0 +1,10 @@
+Tools : Sass and jQuery
+
+Media : form is fixed between screens.
+Desktop : Sidebar / Next button
+Mobile : Navbar / Next and Goback buttons
+
+Form :
+	1 - Head (h2)
+	2 - p
+	3 -inputs

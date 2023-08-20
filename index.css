@@ -1,0 +1,620 @@
+@font-face {
+  font-family: Ubuntu-b;
+  src: url(./fonts/Ubuntu-Bold.ttf); }
+@font-face {
+  font-family: Ubuntu-m;
+  src: url(./fonts/Ubuntu-Medium.ttf); }
+@font-face {
+  font-family: Ubuntu-r;
+  src: url(./fonts/Ubuntu-Regular.ttf); }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\0000320}}
+:root {
+  --Marine-blue: hsl(213, 96%, 18%);
+  --Purplish-blue: hsl(243, 100%, 62%);
+  --Pastel-blue: hsl(228, 100%, 84%);
+  --Light-blue: hsl(206, 94%, 87%);
+  --Strawberry-red: hsl(354, 84%, 57%);
+  --Cool-gray: hsl(231, 11%, 63%);
+  --Light-gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\0000333}}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Ubuntu-r; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\0000340}}
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--Magnolia); }
+
+@media (max-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\0000349}}
+  body {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\0000354}}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\0000358}}
+.hide {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\0000362}}
+h2 {
+  color: var(--Marine-blue);
+  padding-bottom: 5px;
+  font-family: Ubuntu-b; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\0000368}}
+p {
+  color: var(--Cool-gray); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\0000372}}
+button {
+  all: unset; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\0000376}}
+.main {
+  display: grid;
+  padding: 1rem;
+  width: 70%;
+  margin: 0 auto;
+  background-color: #fff;
+  gap: 2rem;
+  grid-template-columns: repeat(6, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-radius: 1rem;
+  -webkit-box-shadow: 5px 5px 5px 5px var(--Light-blue), -5px -5px -5px -5px var(--Light-blue);
+          box-shadow: 5px 5px 5px 5px var(--Light-blue), -5px -5px -5px -5px var(--Light-blue); }
+
+@media (max-width: 760px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\0000392}}
+  .main {
+    width: 100%;
+    padding: 0;
+    background-color: inherit; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\0000399}}
+.selected-step, .sidebar > .container > div span:hover {
+  background-color: var(--Pastel-blue);
+  color: #000;
+  border: 1px solid var(--Cool-gray); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003105}}
+.sidebar {
+  height: 70vh;
+  grid-column: 1/3;
+  background-image: url("./assets/images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  color: var(--White);
+  text-transform: uppercase; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003116}}
+  .sidebar > .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0 0 4rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003119}}
+    .sidebar > .container > div {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003120}}
+      .sidebar > .container > div h5 {
+        margin-top: 5px;
+        letter-spacing: 3px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003125}}
+      .sidebar > .container > div span {
+        padding: 0.7rem;
+        border-radius: 50%;
+        border: 1px solid var(--White);
+        position: relative;
+        top: 27px;
+        right: 45px; }
+
+@media (max-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003142}}
+  .sidebar {
+    grid-column: 1/7;
+    height: 15vh;
+    padding: 1rem;
+    padding-bottom: 10rem;
+    border-radius: 0;
+    background-image: url("./assets/images/bg-sidebar-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003153}}
+    .sidebar .container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin: auto;
+      padding: 2rem 1rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003159}}
+      .sidebar .container > div div {
+        display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003162}}
+      .sidebar .container > div span {
+        position: static;
+        top: 0;
+        right: 0; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003172}}
+.form-1,
+.form-2,
+.form-3,
+.form-4,
+.thanks {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  padding-top: 2rem;
+  grid-column: 3/7;
+  margin: 0 auto;
+  width: 90%; }
+
+@media (max-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003186}}
+  .form-1,
+  .form-2,
+  .form-3,
+  .form-4,
+  .thanks {
+    background-color: var(--White);
+    padding: 1rem;
+    border-radius: 1rem;
+    grid-row: 2/7;
+    grid-column: 1/7;
+    position: relative;
+    bottom: 5rem; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003202}}
+.form-1 .form-head {
+  margin-bottom: 1rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003205}}
+.form-1 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003208}}
+.form-1 .input-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003214}}
+.form-1 .btn-container .next-btn, .form-1 .btn-container .form-4 .conf-btn, .form-4 .form-1 .btn-container .conf-btn {
+  margin-left: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003221}}
+.form-2 .container-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003224}}
+  .form-2 .container-2 > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 30%;
+    height: 30vh;
+    padding: 1rem;
+    border: 2px solid var(--Cool-gray);
+    border-radius: 1rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003232}}
+    .form-2 .container-2 > div:hover {
+      border: 2px solid var(--Purplish-blue);
+      cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003236}}
+    .form-2 .container-2 > div img {
+      width: 40%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003239}}
+    .form-2 .container-2 > div span {
+      color: var(--Cool-gray); }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003242}}
+    .form-2 .container-2 > div h4 {
+      color: var(--Marine-blue);
+      margin-bottom: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003246}}
+    .form-2 .container-2 > div > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003251}}
+.form-2 .toggle-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  color: var(--Cool-gray);
+  font-weight: bold;
+  background-color: var(--Magnolia); }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003261}}
+  .form-2 .toggle-div > span:hover {
+    cursor: pointer;
+    color: var(--Marine-blue); }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003265}}
+  .form-2 .toggle-div > div {
+    width: 50px;
+    height: 15px;
+    padding: 12px 5px;
+    margin: 0 10px;
+    border-radius: 15px;
+    background-color: var(--Marine-blue);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003274}}
+    .form-2 .toggle-div > div:hover {
+      cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003277}}
+    .form-2 .toggle-div > div > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      background-color: var(--White);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%; }
+
+@media (max-width: 760px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003290}}
+  .form-2 .container-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003292}}
+    .form-2 .container-2 > div {
+      width: 100%;
+      height: 100px;
+      padding: 2rem 0.5rem;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      gap: 1rem;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003300}}
+      .form-2 .container-2 > div > img {
+        height: 100%; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003308}}
+.toggled {
+  color: var(--Marine-blue);
+  font-weight: bold; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003312}}
+.free {
+  color: var(--Marine-blue) !important;
+  font-family: Ubuntu-m;
+  font-size: 12px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003320}}
+.form-3 > .container-3 > div {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem;
+  border: 2px solid var(--Cool-gray);
+  border-radius: 1rem;
+  margin-bottom: 1rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003329}}
+  .form-3 > .container-3 > div > div.checkbox {
+    grid-column: 1/2; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003332}}
+  .form-3 > .container-3 > div > div {
+    grid-column: 3/11; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003334}}
+    .form-3 > .container-3 > div > div > h4 {
+      color: var(--Marine-blue);
+      margin-bottom: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003339}}
+  .form-3 > .container-3 > div > span {
+    grid-column: 12/13;
+    color: var(--Purplish-blue); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003347}}
+.form-4 {
+  gap: 3rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003349}}
+  .form-4 > .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    background-color: var(--Alabaster); }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003350}}
+    .form-4 > .content .sub {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003353}}
+    .form-4 > .content h4,
+    .form-4 > .content .cost {
+      color: var(--Purplish-blue); }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003357}}
+    .form-4 > .content .cost {
+      font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003365}}
+    .form-4 > .content > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003369}}
+      .form-4 > .content > div > span {
+        color: var(--Marine-blue); }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003372}}
+      .form-4 > .content > div > h5 {
+        color: var(--Cool-gray); }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003377}}
+  .form-4 > .total {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 1rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003381}}
+    .form-4 > .total > span {
+      color: var(--Cool-gray); }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003384}}
+    .form-4 > .total > h4 {
+      color: var(--Purplish-blue); }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003388}}
+  .form-4 .conf-btn {
+    background-color: var(--Purplish-blue); }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003393}}
+  .form-4 button#change {
+    color: var(--Cool-gray);
+    text-decoration: underline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003396}}
+    .form-4 button#change:hover {
+      cursor: pointer; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003402}}
+.thanks {
+  width: 80%;
+  height: 400px;
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.5;
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003410}}
+  .thanks > h2 {
+    font-size: 2rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003413}}
+  .thanks > p {
+    font-size: 1rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003418}}
+label {
+  color: var(--Purplish-blue);
+  font-weight: bold; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003423}}
+input[type="text"],
+input[type="email"] {
+  all: unset;
+  padding: 15px 10px;
+  border: 1px solid var(--Light-gray);
+  border-radius: 10px;
+  color: var(--Marine-blue);
+  font-family: Ubuntu-m; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003433}}
+input[name="name"] {
+  text-transform: capitalize; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003437}}
+input::-webkit-input-placeholder {
+  color: var(--Cool-gray); }
+input:-ms-input-placeholder {
+  color: var(--Cool-gray); }
+input::-ms-input-placeholder {
+  color: var(--Cool-gray); }
+input::placeholder {
+  color: var(--Cool-gray); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003441}}
+.btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003445}}
+  .btn-container .next-btn, .btn-container .form-4 .conf-btn, .form-4 .btn-container .conf-btn {
+    background-color: var(--Marine-blue);
+    color: var(--White);
+    padding: 10px 20px;
+    border-radius: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003450}}
+    .btn-container .next-btn:hover, .btn-container .form-4 .conf-btn:hover, .form-4 .btn-container .conf-btn:hover {
+      cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003455}}
+  .btn-container .back-btn {
+    color: var(--Cool-gray);
+    font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003458}}
+    .btn-container .back-btn:hover {
+      color: var(--Marine-blue);
+      cursor: pointer; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003465}}
+.attribution {
+  position: absolute;
+  top: 97%; }
+
+@media (max-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003471}}
+  .attribution {
+    top: 150%;
+    text-align: center; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003477}}
+.selected {
+  background-color: var(--Alabaster);
+  border: 1px solid var(--Purplish-blue) !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003483}}
+input.error {
+  border: 1px solid red; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003487}}
+.error {
+  color: red !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003491}}
+.input-div span {
+  position: relative;
+  margin-left: auto;
+  bottom: 80px;
+  color: red;
+  font-weight: bold; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003499}}
+div.checkbox {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--Cool-gray);
+  border-radius: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/Projects\/Frontend\%20Mentor\/multi-step-form-main\/index\.scss}line{font-family:\00003506}}
+.checked {
+  background-image: url(./assets/images/icon-checkmark.svg);
+  background-color: var(--Purplish-blue);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/*# sourceMappingURL=index.css.map */
