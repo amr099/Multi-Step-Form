@@ -272,6 +272,10 @@ button {
   border-radius: 50%;
 }
 
+.justify-end {
+  justify-content: end;
+}
+
 @media (max-width: 420px) {
   .form-2 .container-2 {
     display: flex;

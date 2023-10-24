@@ -7,9 +7,10 @@ $(function () {
 
 
     // Step 2 Toggle.
-    $(".toggle-div").on("click", function () {
-        $(".year").toggle().removeClass("hide");
-        $(".month").toggle().addClass("hide");
+    $(".toggle").on("click", function () {
+        $(".year, .month").toggleClass('hide');
+        $(".monthly, .yearly").toggleClass('toggled');
+        $(this).toggleClass('justify-end');
         monthly = !monthly
     });
 
