@@ -212,7 +212,7 @@ button {
   gap: 0;
   justify-content: space-between;
   width: 30%;
-  height: 30vh;
+  height: 200px;
   padding: 1rem;
   border: 2px solid var(--Cool-gray);
   border-radius: 1rem;
