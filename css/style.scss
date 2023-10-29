@@ -1,3 +1,6 @@
+$mobile: 768px;
+$tablet: 1200px;
+
 @mixin flex($dir, $gap) {
   display: flex;
   flex-direction: $dir;
@@ -45,7 +48,7 @@ body {
   background-color: var(--Magnolia);
 }
 
-@media (max-width: "970px") {
+@media (max-width: $mobile) {
   body {
     justify-content: flex-start !important;
   }
@@ -89,7 +92,13 @@ button {
     -5px -5px -5px -5px var(--Light-blue);
 }
 
-@media (max-width: "970px") {
+@media (max-width: $tablet) {
+  .main {
+    width: 90%;
+  }
+}
+
+@media (max-width: $mobile) {
   .main {
     width: 100%;
     padding: 0;
@@ -140,7 +149,7 @@ button {
   }
 }
 
-@media (max-width: "970px") {
+@media (max-width: $mobile) {
   .sidebar {
     grid-column: 1/7;
     height: 15vh;
@@ -185,7 +194,7 @@ button {
   min-height: 600px;
 }
 
-@media (max-width: "970px") {
+@media (max-width: $mobile) {
   .form-1,
   .form-2,
   .form-3,
@@ -474,7 +483,7 @@ input::placeholder {
   top: 97%;
 }
 
-@media (max-width: "970px") {
+@media (max-width: $mobile) {
   .attribution {
     top: 150%;
     text-align: center;
