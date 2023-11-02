@@ -46,6 +46,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--Magnolia);
+  overflow-x: hidden;
 }
 
 @media (max-width: $mobile) {
