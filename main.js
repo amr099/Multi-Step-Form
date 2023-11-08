@@ -63,20 +63,20 @@ $(function () {
     // Plan-Form
     // Selection
     for (let i = 0; i <= 3; i++) {
-        $(`.plan-div:nth(${i})`).on("click", () => {
-            $(`.plan-div:nth(${i})`).addClass("selected");
-            $(`:not(.plan-div:nth(${i}))`).removeClass("selected");
+        $(`.plan:nth(${i})`).on("click", () => {
+            $(`.plan:nth(${i})`).addClass("selected");
+            $(`:not(.plan:nth(${i}))`).removeClass("selected");
         });
     }
     // Plan-Form 
     // Submission
     $(".form-2 .next-btn").on("click", () => {
         for (let i = 0; i <= 3; i++) {
-            if ($(`.plan-div:nth(${i})`).hasClass("selected")) {
-                planName = $(`.plan-div:nth(${i})`).find("h4").html();
+            if ($(`.plan:nth(${i})`).hasClass("selected")) {
+                planName = $(`.plan:nth(${i})`).find("h4").html();
                 planCost = monthly
-                    ? $(`.plan-div:nth(${i})`).find("span.month").html()
-                    : $(`.plan-div:nth(${i})`).find("span.year").html();
+                    ? $(`.plan:nth(${i})`).find("span.month").html()
+                    : $(`.plan:nth(${i})`).find("span.year").html();
             }
         }
         if (planName && planCost) {
