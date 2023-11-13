@@ -29,7 +29,10 @@
   font-family: Ubuntu-r;
   box-sizing: border-box;
 }
-
+html{
+ overflow-x: hidden;
+  word-break: break-all
+}
 body {
   min-height: 100vh;
   display: flex;
